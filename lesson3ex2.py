@@ -1,0 +1,6 @@
+etap1 = input("Введите первый этап: ")
+etap2 = input("Введите второй этап: ")
+etap3 = input("Введите третий этап: ")
+etap4 = input("Введите четвертый этап: ")
+etap5 = input("Введите пятый этап: ")
+print(etap1, etap2, etap3, etap4, etap5, sep=" => ")
