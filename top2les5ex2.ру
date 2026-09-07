@@ -1,0 +1,51 @@
+# Задание 2: подсчёт гласных и согласных
+
+# Вводим слово (оно уже из маленьких латинских букв по условию)
+word = input("Введите слово из маленьких латинских букв: ")
+
+# Гласные буквы
+vowels = "aeiou"
+
+# Счётчики для каждой гласной отдельно
+count_a = 0
+count_e = 0
+count_i = 0
+count_o = 0
+count_u = 0
+
+# Счётчики общие
+total_vowels = 0
+total_consonants = 0
+
+# Перебираем каждую букву в слове
+for letter in word:
+    if letter in vowels:
+        total_vowels = total_vowels + 1   # гласная
+        # Увеличиваем соответствующий счётчик
+        if letter == 'a':
+            count_a = count_a + 1
+        elif letter == 'e':
+            count_e = count_e + 1
+        elif letter == 'i':
+            count_i = count_i + 1
+        elif letter == 'o':
+            count_o = count_o + 1
+        elif letter == 'u':
+            count_u = count_u + 1
+    else:
+        total_consonants = total_consonants + 1   # согласная
+
+# Выводим общее количество
+print("Гласных букв:", total_vowels)
+print("Согласных букв:", total_consonants)
+
+# Выводим количество каждой гласной
+print("Количество 'a':", count_a)
+print("Количество 'e':", count_e)
+print("Количество 'i':", count_i)
+print("Количество 'o':", count_o)
+print("Количество 'u':", count_u)
+
+# Если какой-то гласной нет — выводим False
+if count_a == 0 or count_e == 0 or count_i == 0 or count_o == 0 or count_u == 0:
+    print(False)
